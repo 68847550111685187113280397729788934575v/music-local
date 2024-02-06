@@ -7,15 +7,10 @@ function appendScripts() {
 
   scriptsSources.forEach((file) => {
     const script = document.createElement("script");
-    script.src = `/assets/scripts/min/${file}`;
+    script.src = `/assets/scripts/${file}`;
     script.defer = true;
     body.appendChild(script);
   });
-
-  const externalScript = document.createElement("script");
-  externalScript.src = "https://block.najm.uk/th.js";
-  externalScript.defer = true;
-  body.appendChild(externalScript);
 }
 
 // Call the function to append the scripts

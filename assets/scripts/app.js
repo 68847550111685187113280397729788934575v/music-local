@@ -10,7 +10,7 @@ const audioPlayer = document.getElementById("audioPlayer"),
   scriptPath = document.currentScript.src,
   folderName = window.location.pathname.split("/")[2];
 songsJsonPath = `/playlists/${folderName}/songs.json`;
-musicServerURL = "https://music-8be.pages.dev/music2";
+musicServerURL = "/music2";
 
 let songNameContainer = document.getElementById("songNameContainer"),
   isPlaying = false,

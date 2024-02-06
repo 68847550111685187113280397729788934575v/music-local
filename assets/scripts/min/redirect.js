@@ -1,1 +1,0 @@
-let redirectURL="/playlists/ramadan";window.addEventListener("load",(function(){window.location.pathname.includes(redirectURL)?console.log("No Redirect Active"):window.location.href=redirectURL}));

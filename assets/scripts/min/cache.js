@@ -1,1 +1,0 @@
-const songName=this.dataset.song;"caches"in window&&caches.open("songCache").then((function(n){fetch("/musicIndex.json").then((function(n){return n.json()})).then((function(e){for(const s of e){var o=`${musicServerURL}/${songName}.mp3`;n.add(o)}}))}));
