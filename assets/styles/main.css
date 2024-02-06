@@ -1,0 +1,356 @@
+:root {
+  --accent: #00ff22;
+  --backgroundColor: #3a3a3a;
+  --darkBackground: #161616;
+  --downloadBtn: #2e9131;
+  --downloadBtnHover: #33b63a;
+  --font: "Roboto Mono", monospace;
+  --foregroundColor: #2c2c2c;
+  --textColor: #ffffff;
+  --songBorderColor: #000000;
+  --buttonColor: #ffffff;
+  --main: #4285f4;
+  --mainActive: #65b3d4;
+  --mainHover: #5c8ddc;
+}
+
+body {
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+  min-width: 360px;
+  background-color: var(--backgroundColor);
+  color: var(--textDark);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--darkBackground);
+  color: var(--textColor);
+}
+
+.title {
+  text-align: center;
+  transition: all 1.15s;
+}
+
+.title:hover {
+  color: var(--accent);
+  transform: scale3d(1.2, 1.8, 1.2);
+  cursor: pointer;
+}
+
+.music-player {
+  text-align: center;
+  background-color: var(--foregroundColor);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+#progressSlider {
+  width: 200px;
+  -webkit-appearance: none;
+  background-color: #ddd;
+  border-radius: 5px;
+  height: 5px;
+}
+
+#progressSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--main);
+}
+
+.progress-time {
+  font-size: 12px;
+  font-weight: bol;
+  margin: 5px 0;
+  color: #555;
+}
+
+.download-div {
+  float: left;
+  margin-right: 10px;
+}
+
+.download-btn {
+  background-color: var(--downloadBtn);
+  color: #ddd;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.download-btn:hover {
+  background-color: var(--downloadBtnHover);
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s, background-color 0.4s;
+}
+
+.music-list {
+  text-align: left;
+}
+
+.music-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.music-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#songNameContainer {
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+#songNameContainer:hover {
+  color: var(--accent);
+  transform: none;
+}
+
+.song-name {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid var(--songBorderColor);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 3px;
+}
+
+.song-name.darken {
+  background-color: #2c3e50;
+  color: var(--textColor);
+}
+
+.song-name:hover {
+  background-color: #f1f1f1;
+  color: black;
+  cursor: pointer;
+}
+
+#playPauseBtn {
+  background-color: var(--main);
+  color: var(--buttonColor);
+  border: none;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 3px;
+}
+
+#playPauseBtn:hover {
+  background-color: var(-mainHover);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: var(--main);
+  color: var(--buttonColor);
+  border: none;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  float: right;
+}
+
+#speedSelect {
+  padding: 5px;
+  border: 1px solid var(--textColor);
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+#speedSelect:focus {
+  outline: none;
+}
+
+.watermark {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: var(--textColor);
+}
+
+a {
+  color: var(--accent);
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+a:hover {
+  background-color: #f1f1f1;
+  color: black;
+  cursor: pointer;
+}
+
+.github-link {
+  background-color: white;
+  color: black;
+  border: 2px solid #58ca5b;
+}
+
+.github-link-1:hover {
+  background-color: hsl(122, 39%, 41%);
+  color: white;
+}
+
+.control-btn {
+  background-color: var(--main);
+  color: var(--buttonColor);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 3px;
+}
+
+.control-btn:hover {
+  background-color: var(--mainHover);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.control-btn.active {
+  background-color: var(--mainActive);
+  color: var(--textColor);
+}
+
+#speedSelect {
+  padding: 5px;
+  border: 1px solid var(--buttonColor);
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+#speedSelect:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+
+  #playPauseBtn {
+    color: var(--buttonColor);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 3px;
+  }
+
+  #playPauseBtn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  #progressSlider {
+    width: 200px;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    height: 5px;
+  }
+
+  #progressSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  #progressTime {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #555;
+  }
+
+  #volumeSlider {
+    width: 100px;
+    -webkit-appearance: none;
+    background-color: var(--buttonColor);
+    border-radius: 5px;
+    height: 5px;
+  }
+
+  #volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  #speedSelect {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+
+  #speedSelect:focus {
+    outline: none;
+  }
+
+  .extra-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  .control-btn {
+    color: var(--buttonColor);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 3px;
+  }
+
+  .control-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .control-btn.active {
+    background-color: var(--mainActive);
+    color: var(--buttonColor);
+  }
+}
+@media (max-width: 767px) {
+  #volumeSlider {
+    display: none;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/assets/scripts/auth.js" defer></script>
+    <script src="/assets/scripts/auth2.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Site Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- link main.css -->
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>AJMAL MUSIC</title>
+    <!-- Custom Styles CSS-->
+    <style>
+      :root {
+        --accent: #42f4a1 !important;
+        --backgroundColor: #3a3a3a !important;
+        --darkBackground: #161616 !important;
+        --downloadBtn: #548d56 !important;
+        --downloadBtnHover: #3f6841 !important;
+        --font: "Roboto Mono", monospace !important;
+        --foregroundColor: #2c2c2c !important;
+        --main: #91f48a !important;
+        --mainActive: #7fee77 !important;
+        --mainHover: #7fee77037 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">AJMAL MUSIC</h1>
+      <div class="music-player">
+        <div id="songNameContainer"></div>
+        <audio id="audioPlayer">
+          Your browser does not support the audio element. Try using a different
+          browser.
+        </audio>
+        <div id="playlistContainer">
+          <br />
+        </div>
+        <div class="controls">
+          <button id="playPauseBtn">▶</button>
+          <input type="range" id="progressSlider" min="0" step="1" />
+          <div id="progressTime" class="progress-time">0:00 / 0:00</div>
+          <input
+            type="range"
+            id="volumeSlider"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+          />
+          <select id="speedSelect"></select>
+          <div class="extra-controls">
+            <button id="randomBtn" class="control-btn" onclick="toggleRandom()">
+              Random
+            </button>
+            <button id="loopBtn" class="control-btn" onclick="toggleLoop()">
+              Loop
+            </button>
+            <br />
+          </div>
+        </div>
+
+        <div class="music-list">
+          <br />
+          <ul id="songList">
+            <!-- Dynamic song list will be generated here -->
+          </ul>
+        </div>
+        <br />
+        <div class="watermark"></div>
+      </div>
+    </div>
+    <script src="/assets/scripts/one.js"></script>
+    <script src="/service-worker.js"></script>
+  </body>
+</html>
